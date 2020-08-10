@@ -1,10 +1,4 @@
-fetch('http://localhost:4000/clientes')
-    .then(resposta => {
-        return resposta.json()
-    })
-    .then( json => {
-        console.log(json)
-    })
+
 
 
 
@@ -27,6 +21,10 @@ const exibeCliente = (cpf, nome) => {
     return linha
 }
 
-informacoesClientes.forEach(indice => {
-    corpoTabela.appendChild(exibeCliente(indice.cpf, indice.nome))
-})
+listarClientes().then(exibe => {
+    exibe.forEach(indice => {
+        corpoTabela.appendChild(exibeCliente(indice.cpf, indice.nome))
+    })
+}
+
+)
