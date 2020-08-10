@@ -1,13 +1,10 @@
-const informacoesClientes = [
-    {
-        cpf: 66809433023,
-        nome: "Jairo"
-    },
-    {
-        cpf: 66809433023,
-        nome: "Mônica"
-    }
-]
+fetch('http://localhost:4000/clientes')
+    .then(resposta => {
+        return resposta.json()
+    })
+    .then( json => {
+        console.log(json)
+    })
 
 
 
@@ -26,8 +23,8 @@ const exibeCliente = (cpf, nome) => {
         <td>${nome}</td>
 
       `
-      linha.innerHTML = conteudoLInha
-      return linha
+    linha.innerHTML = conteudoLInha
+    return linha
 }
 
 informacoesClientes.forEach(indice => {
