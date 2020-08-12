@@ -27,15 +27,10 @@ const cadastrarClientes = (nome, cpf) => {
         });
 }
 
-// const listarClientes = () => {
-//     return fetch("http:localhost:4000/clientes", {
-//       method: "get"
-//     })
-//       .then(resp => {
-//         return resp.json();
-//       })
-//       .then(json => {
-//         return json;
-//       });
-//   };
+const deletaCliente = id => {
+    return fetch(`http://localhost:400/clientes/cliente/${id}`, {
+        method: 'DELETE'
+
+    })
+}
 
