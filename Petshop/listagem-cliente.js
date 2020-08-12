@@ -3,7 +3,7 @@
 
 
 
-const corpoTabela = document.querySelector("[data-conteudo-tabela]")
+const corpoTabela = document.querySelector("[data-conteudo-tabela]");
 
 
 
@@ -23,8 +23,8 @@ const exibeCliente = (cpf, nome) => {
 
 listarClientes().then(exibe => {
     exibe.forEach(indice => {
-        corpoTabela.appendChild(exibeCliente(indice.cpf, indice.nome))
-    })
+        corpoTabela.appendChild(exibeCliente(indice.cpf, indice.nome));
+    });
 }
 
 )
