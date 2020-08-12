@@ -34,3 +34,12 @@ const deletaCliente = id => {
     })
 }
 
+const detalhaCliente = id => {
+    return fetch(`http://localhost:400/clientes/cliente/${id}`,{
+        method: 'GET'
+    })
+    .then(resposta => {
+        return resposta.json()
+    })
+}
+

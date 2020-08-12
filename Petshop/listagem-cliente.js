@@ -13,6 +13,7 @@ const exibeCliente = (cpf, nome, id) => {
         <td>${cpf}</td>
         <td>${nome}</td>
         <button type="" class="btn btn-danger" onclick="removeCliente(${id})">Excluir</button>
+        <a href="edita-clientes.html"><button type="button" class="btn-info">Editar</button></a>
       `
     linha.innerHTML = conteudoLInha
     return linha
